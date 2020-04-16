@@ -28,7 +28,7 @@ export default {
 
 #post-errands .post-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 20px;
   width: 95%;
   margin-left: auto;
@@ -37,17 +37,15 @@ export default {
 }
 
 #post-errands .post-card {
-  width: 212px;
-  height:  42px;
-  border: 1px solid #D1E9F270;
+  height: 42px;
+  border: 1px solid rgba(190, 212, 219, 0.439);
   border-radius: 15px;
   background: #EEF6F9;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   padding: 10px;
-  width: 80%;
+  width: auto !important;
 }
 
 #post-errands .continue {
@@ -64,12 +62,13 @@ export default {
 #post-errands .post-card img {
   width: 20px;
   height: 20px;
+  margin-right: 23px;
   object-fit: contain;
 }
 
 #post-errands .post-card p{
   color: #292929;
-  font-size: 15px;
+  font-size: 12px;
   padding-top: 15px;
 }
 </style>
