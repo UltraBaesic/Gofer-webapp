@@ -146,7 +146,7 @@ export default {
 
 #home .tab-container {
   width: 65%;
-  height: 610px;
+  height: 700px;
   margin: 0 auto;
   box-shadow: 6px -6px 20px #FFFFFF8F;
   background: #EEF6F9;

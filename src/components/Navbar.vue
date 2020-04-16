@@ -14,10 +14,10 @@
             <router-link class="nav-link" to="#">FAQ's</router-link>
           </li>
           <li class="nav-item text-white">
-            <router-link class="nav-link" to="#">Login</router-link>
+            <router-link class="nav-link" to="/login">Login</router-link>
           </li>
           <li class="nav-item active">
-            <router-link class="nav-link register" to="#">Register</router-link>
+            <router-link class="nav-link register" to="/register">Register</router-link>
           </li>
       </ul>
     </nav>
