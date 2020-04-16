@@ -1,24 +1,22 @@
 # Gofer
+Frontend repository for gofer project
 
-## Project setup
-```
-npm install
-```
+<br />
+<br />
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Table of Contents
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Support or Contribution](#Support~Contribution)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Technology Stack
+- Vue
+- Vuex
+- NodeJS.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Installation
+1. Install [`Node JS`](https://nodejs.org/en/).
+2. To clone, run `git clone https://github.com/UltraBaesic/Gofer-webapp.git`.
+3. `cd` into the root of the **project directory**.
+4. Run `npm install` on the terminal to install dependecies.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
