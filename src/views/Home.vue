@@ -31,7 +31,7 @@
             </li>
           </ul>
           <div class="tab-content py-3" id="myTabContent">
-            <div class="tab-pane fade" :class="{'active show': isActive('post')}">
+            <div class="tab-pane fade" :class="{'active show': isActive('post')}" id="post">
               <div class="d-flex justify-content-center post">
                 <div>
                   <h4>What Kind of Errand do you want done?</h4>
@@ -40,8 +40,40 @@
                 </div>
               </div>
             </div>
+            <div class="tab-pane fade" :class="{'active show': isActive('run')}" id="run">
+              <div class="d-flex justify-content-center run">
+                <div>
+                  <h4>You can Run Errands for People</h4>
+                  <p>Everybody can run errands, make money by running errands for people. bid for errands around you and earn money on the go, no special skill required to run errands for people. You can pick up just any type of errand</p>
+                  <run-errands></run-errands>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" :class="{'active show': isActive('get')}" id="get">
+              <div class="d-flex justify-content-center get">
+                <div>
+                  <h4>Get your Account Verified</h4>
+                  <p>Everybody can run errands, make money by running errands for people. bid for errands around you and earn money on the go, no special skill required to run errands for people. You can pick up just any type of errand</p>
+                  <get-verified></get-verified>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" :class="{'active show': isActive('join')}" id="join">
+              <div class="d-flex justify-content-center join">
+                <div>
+                  <h4>Apply to Become a Merchant</h4>
+                  <p>You want to run our errands for us, come on board and help us help other people run errands while you make money.</p>
+                  <join-us></join-us>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="d-flex justify-content-between post-errand-section">
+      <div class="col-lg-5 col-md-8 col-sm-12">
+       <div class="image-background"></div>
       </div>
     </section>
   </main>
@@ -50,11 +82,17 @@
 <script>
 import NavBar from '../components/Navbar'
 import PostErrands from '../components/PostErrands'
+import RunErrands from '../components/RunErrands'
+import GetVerified from '../components/GetVerified'
+import JoinUs from '../components/JoinUs'
 
 export default {
   components: {
     NavBar,
-    PostErrands
+    PostErrands,
+    RunErrands,
+    GetVerified,
+    JoinUs
   },
   data(){
     return {
@@ -146,14 +184,13 @@ export default {
 
 #home .tab-container {
   width: 65%;
-  height: 700px;
+  height: auto;
   margin: 0 auto;
   box-shadow: 6px -6px 20px #FFFFFF8F;
   background: #EEF6F9;
   border-radius: 15px;
   border: none;
-  position: absolute;
-  top: -12rem;
+  margin-top: -228px;
 }
 
 #home .nav-tabs {
@@ -174,18 +211,40 @@ export default {
   padding-bottom: 16px;
 }
 
-#home .post{
+#home .post,
+#home .run,
+#home .get,
+#home .join
+{
   text-align: center;
 }
 
-#home .post h4{
+#home .post h4,
+#home .run h4,
+#home .get h4,
+#home .join h4
+{
   color: #292929;
   font-weight: 900;
 }
 
-#home .post p{
-  width: 53%;
+#home .post p,
+#home .run p,
+#home .get p,
+#home .join p
+{
+  width: 77%;
   margin: 0 auto;
+  font-size: 15px;
   color: #292929;
 }
+
+#home .post-errand-section {
+  padding: 60px 120px;
+}
+
+#home .post-errand-section .image-background {
+  position: relative;
+}
+
 </style>
