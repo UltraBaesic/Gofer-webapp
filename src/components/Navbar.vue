@@ -42,6 +42,10 @@ export default {
   object-fit: contain;
 }
 
+.navbar-nav {
+  margin-right: 5rem;
+}
+
 #nav-bar .nav-links a {
   color: #ffffff;
   font-weight: 700;

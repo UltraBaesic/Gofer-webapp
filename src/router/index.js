@@ -15,13 +15,17 @@ export const router = new Router({
           component: () => import('@/views/Home.vue')
         },
         {
+          path: '/errands',
+          component: () => import('@/views/Errands.vue')
+        },
+        {
           path: '/login',
           component: () => import('@/views/Login.vue')
         },
         {
           path: '/register',
           component: () => import('@/views/Register.vue')
-        }
+        },
       ]
     }
   ]

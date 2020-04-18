@@ -1,0 +1,13 @@
+@import 'icons.css';
+
+[class^=icon-material-], [class*=" icon-material-"] {
+  font-family: material-icons!important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
