@@ -50,7 +50,7 @@ export default {
 
 #post-errands .continue {
   width: 127px;
-  height: 34px;
+  height: 44px;
   background: #0087BB;
   letter-spacing: 0.36px;
   color: #FFFFFF;
