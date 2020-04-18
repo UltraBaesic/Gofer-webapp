@@ -97,10 +97,10 @@
               </div>
               <div class="post-list">
                 <ul class="post-errand-list">
-                  <li>Describe the errand and the reward for the errand</li>
-                  <li>Wait for someone to bid or negotiate</li>
-                  <li>Accept or reject bids</li>
-                  <li>Track errand and end errand after errand is successful</li>
+                  <li class="list-item-post">Describe the errand and the reward for the errand</li>
+                  <li class="list-item-post">Wait for someone to bid or negotiate</li>
+                  <li class="list-item-post">Accept or reject bids</li>
+                  <li class="list-item-post">Track errand and end errand after errand is successful</li>
                 </ul>
               </div>
             </div>
@@ -252,7 +252,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="get-started-section">
       <div class="get-started-outer">
         <div class="container">
           <div class="row p-5 get-started">
@@ -474,6 +474,10 @@ export default {
   padding-bottom: 70px;
 }
 
+.list-item-post {
+  color: #000000;
+}
+
 .second-block {
   background-color: #e8f4f9;
 }
@@ -496,6 +500,7 @@ export default {
 .btn-apply {
   padding: 0.775rem 0.99rem;
   border-radius: 9px;
+  color: #ffffff;
 }
 
 .post-image {
