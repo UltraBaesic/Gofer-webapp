@@ -73,7 +73,118 @@
     </section>
     <section class="d-flex justify-content-between post-errand-section">
       <div class="col-lg-5 col-md-8 col-sm-12">
-       <div class="image-background"></div>
+       <div class="image-background">
+         <img src="@/assets/img/Path6.svg" alt="" class="blue-background">
+         <img src="@/assets/img/home.png" alt="" class="phone-img">
+       </div>
+      </div>
+      <div class="col-lg-7 col-md-8 col-sm-12 pl-5 list-post">
+        <div>
+          <h2><span class="post">Post Your Errand</span> and let someone do it for you</h2>
+          <p class="post-1">You don't have to do all the work by yourself, let someone ease you off the stress. 
+            <span class="post-2">Download the Gofer App</span> now and start sending errands.</p>
+        </div>
+        <div class="list-gofer">
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Describe the errand and the reward for the errand</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Wait for someone to bid or negotiate</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Wait for someone to bid or negotiate</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Accept or reject bids</p>
+          </div>
+           <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Track errand and end errand after errand is successful.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="run-errands">
+      <div class="col-lg-6 col-md-8 col-sm-12">
+         <div>
+          <h2><span class="post">Run Errands </span>for people and earn money</h2>
+          <p class="post-1">Search and bid for errands that you would like to run. Run errands and earn money after successful completion of the errand.</p>
+        </div>
+        <div class="list-run-errands__container">
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Search and bid for errands</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Wait to be accepted by the sender</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Run errand and end errand after completion</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Earn Money</p>
+          </div>
+           <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Track errand and end errand after errand is successful.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <div>
+          <img src="@/assets/img/home.png" alt="" class="phone-img">
+        </div>
+      </div>
+    </section>
+    <section class="join-us__section">
+      <div class="col-lg-6 col-md-8 col-sm-12 pl-0">
+        <div class="card-container">
+          <div class="big-card"></div>
+          <div class="small-card__black"></div>
+          <div class="small-card__white"></div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-8 col-sm-12 join__content">
+        <div>
+          <h2><span class="post">Join us</span>, be part of the team that run errands for us</h2>
+          <p class="post-1">Running errands for us comes with special privileges. To join our team of errand runners you have to apply to be a special errand runner and all errands directed to Gofer will be assigned to our different errand runners in different regions.</p>
+        </div>
+        <button class="btn bt-sm apply-now">
+          apply now
+        </button>
+      </div>
+    </section>
+    <section class="wallet-section">
+      <div class="wallet-top">
+        <div class="straight-line"></div>
+        <h2>wallet</h2>
+      </div>
+      <div class="d-flex justify-content-between align-items-center round-card__container">
+        <div class="col-lg-4 col-md-8 col-sm-12">
+        <div class="round-card">
+          <img src="@/assets/img/wallet.png" alt="">
+        </div>
+        <h6>my wallet</h6>
+      </div>
+      <div class="col-lg-4 col-md-8 col-sm-12">
+        <div class="round-card">
+          <img src="@/assets/img/password.png" alt="">
+        </div>
+        <h6>wallet pin</h6>
+      </div>
+      <div class="col-lg-4 col-md-8 col-sm-12">
+        <div class="round-card">
+          <img src="@/assets/img/refund.png" alt="">
+        </div>
+        <h6>escrow account</h6>
+      </div>
       </div>
     </section>
   </main>
@@ -186,7 +297,7 @@ export default {
   width: 65%;
   height: auto;
   margin: 0 auto;
-  box-shadow: 6px -6px 20px #FFFFFF8F;
+  box-shadow: 3px 0px 20px #0000004A;
   background: #EEF6F9;
   border-radius: 15px;
   border: none;
@@ -245,6 +356,257 @@ export default {
 
 #home .post-errand-section .image-background {
   position: relative;
+}
+
+#home .post-errand-section {
+  padding: 100px;
+}
+
+#home .post-errand-section .image-background {
+  position: relative;
+}
+
+#home .post-errand-section .image-background .blue-background {
+  width: 26rem;
+}
+
+#home .post-errand-section .image-background .phone-img {
+  width: 73%;
+  object-fit: contain;
+  position: absolute;
+  left: 46px;
+  top: -32px;
+}
+
+#home .post-errand-section .list-post h2 {
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  color: #07719A;
+  width: 80%;
+}
+
+#home .post-errand-section .list-post .post {
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  letter-spacing: 1.02px;
+}
+
+#home .post-errand-section .list-post .post-1 {
+  color: #515151;
+  font-size: 14px;
+  width: 76%;
+  font-weight: 400;
+}
+
+#home .post-errand-section .list-post .post-2 {
+  color: #07719A;
+  font-weight: 400;
+}
+
+#home .post-errand-section .list-gofer .bullet-point {
+  width: 8px;
+  height: 8px;
+  background: #0086B9;
+  border-radius: 100%;
+  margin-top: 0px;
+}
+
+#home .post-errand-section .list-gofer p {
+  color: #515151;
+  font-weight: 500;
+  padding-top: 10px;
+  font-size: 14px;
+  padding: 0;
+  margin: 7px;
+}
+
+#home .run-errands {
+  padding: 60px 100px;
+  box-shadow: 3px 0px 20px #0000004A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #E8F4F9;
+}
+
+#home .run-errands h2 {
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  width: 80%;
+}
+
+#home .run-errands .post {
+  font-size: 39px;
+  font-weight: bold;
+  color: #07719A;
+}
+
+#home .run-errands .post-1 {
+  color: #515151;
+  font-size: 14px;
+  width: 76%;
+  font-weight: 400;
+}
+
+#home .run-errands .post-2 {
+  color: #07719A;
+  font-weight: 400;
+}
+
+#home .run-errands .list-run-errands__container .bullet-point {
+  width: 8px;
+  height: 8px;
+  background: #0086B9;
+  border-radius: 100%;
+  margin-top: 0px;
+}
+
+#home .run-errands .list-run-errands__container p {
+  color: #515151;
+  font-weight: 500;
+  padding-top: 10px;
+  font-size: 14px;
+  padding: 0;
+  margin: 7px;
+}
+
+#home .run-errands .phone-img {
+  width: 90%;
+}
+
+#home .join-us__section {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home .join-us__section .card-container {
+  width: 30rem;
+  height: 27rem;
+  position: relative;
+}
+
+#home .join-us__section .big-card {
+  width: 24rem;
+  height: 25rem;
+  background: #13F7FF;
+}
+
+#home .join-us__section .small-card__black {
+  width: 17rem;
+  height: 14rem;
+  background: #000000;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 15%;
+  right: 0
+}
+
+#home .join-us__section .small-card__white {
+  width: 17rem;
+  height: 14rem;
+  background: #ffffff;
+  box-shadow: 0px 3px 22px #68686854;
+  border-radius: 10px;
+  position: absolute;
+  top: 18.5%;
+  right: -7%;
+}
+
+#home .join-us__section .join__content h2{
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  width: 80%;
+}
+
+#home .join-us__section .join__content .post{
+  font-size: 39px;
+  font-weight: bold;
+  color: #07719A;
+}
+
+#home .join-us__section .join__content .post-1 {
+  color: #515151;
+  font-size: 14px;
+  width: 76%;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+#home .join-us__section .apply-now {
+  margin-top: 30px;
+  background: #0087BB;
+  color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+#home .wallet-section {
+  padding: 100px 40px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#home .wallet-section .wallet-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 26%;
+}
+
+#home .wallet-section .wallet-top .straight-line {
+  height: 3px;
+  width: 160px;
+  background: #515151;
+}
+
+#home .wallet-section .wallet-top h2 {
+  color: #0086B9;
+  letter-spacing: 1.02px;
+  font-size: 36px;
+  text-transform: capitalize;
+}
+
+#home .wallet-section .round-card__container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+#home .wallet-section .round-card__container .round-card {
+  width: 8rem;
+  height: 8rem;
+  background: #E6F3F8;
+  border-radius: 100%;
+  box-shadow: -6px -6px 20px #FFFFFF, 0px 3px 8px #00000029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home .wallet-section .round-card__container .round-card img {
+  width: 40%;
+  object-fit: contain;
+}
+
+#home .wallet-section .round-card__container h6 {
+  font-weight: 600;
+  letter-spacing: 0.36px;
+  color: #515151;
+  font-size: 15px;
+  text-transform: capitalize;
 }
 
 </style>
