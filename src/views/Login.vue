@@ -1,147 +1,100 @@
 <template>
   <main id="login">
-    <div class="row">
-      <div class="col-md-6 right-side">
-        <div class="lb-header">
-          <a
-            href="#"
-            class="login-link active"
-            id="login-box-link"
-            @click.prevent="setActive('login')"
-            :class="{ active: isActive('login') }"
-          >Login</a>
-          <a
-            href="#"
-            class="register-link"
-            id="register-box-link"
-            @click.prevent="setActive('register')"
-            :class="{ active: isActive('register') }"
-          >Register</a>
-        </div>
-
-        <div class id>
-          <div class="tab-pane fade" :class="{'active show': isActive('login')}">
-            <div class="d-flex justify-content-center">
-              <div>
-                <form class="email-login">
-                  <h1 class="login-header">Login</h1>
-                  <p class="login-text">Enter your details and make sure protect your details from hackers</p>
-
-                  <div class="col-xl-6 col-md-6" style="margin-top: 40px;">
-                    <div class="section-headline margin-top-25 margin-bottom-12">
-                      <h5 class="input-text">Email Address</h5>
-                    </div>
-                    <input class="input-box" placeholder />
-                  </div>
-
-                  <div class="col-xl-6 col-md-6" style="margin-top: 40px;">
-                    <div class="section-headline margin-top-25 margin-bottom-12">
-                      <h5 class="input-text">Password</h5>
-                    </div>
-                    <input class="input-box" placeholder />
-                  </div>
-                  <div class="password-block">
-                    <a href="#" class="forgot-pass" @click.prevent>Forgot Password?</a>
-                  </div>
-                  <div id="checkbox">
-                    <input type="checkbox" value="" class="checkboxme" v-model="rememberme" />
-
-                    <label for="check">Remember me</label>
-                  </div>
-                  <div class="login-btn-block">
-                    <a href="./errands.html" class="btn-login">Login</a>
-                  </div>
-                  <p class="account">
-                    Don't have an account?
-                    <a href="register" class="register-span-link">
-                      <span class="register-span" id="register-span">Register</span>
-                    </a>
-                  </p>
-                </form>
-              </div>
-            </div>
+    <section class="auth-container">
+      <div class="col-xl-5 col-lg-5 col-md-8 col-sm-12 col-xs-12 auth-image">
+        <img src="@/assets/img/auth-img.png" alt="auth-img">
+        <h3>Get Stuffs Done for you.</h3>
+        <p>A large network of people are available to run errands and execute tasks for you</p>
+      </div>
+      <div class="col-xl-7 col-lg-7 col-md-8 col-sm-12 col-xs-12 auth-main">
+        <div class="tab-section">
+          <div class="tab-header">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="nav-item">
+                <a class="nav-link" @click.prevent="setActive('register')" :class="{ active: isActive('register') }" href="#register">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" @click.prevent="setActive('login')" :class="{ active: isActive('login') }" href="#login">Login</a>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <div class id>
-          <div class="tab-pane fade" :class="{'active show': isActive('register')}">
-            <div class="d-flex justify-content-center login">
-              <div>
-                <form class="email-signup">
-                  <h1 class="login-header">Create an account</h1>
-                  <p class="login-text">Fill in your details to register and start gofering</p>
-                  <div class="account-input">
-                    <div class="col-xl-3 col-md-3" style="margin-top: 20px;">
-                      <div class="section-headline margin-top-25 margin-bottom-12">
-                        <h5 class="input-text">First Name</h5>
-                      </div>
-                      <input class="input-box input-boxes" placeholder />
-                    </div>
-
-                    <div class="col-xl-3 col-md-3" style="margin-top: 20px;">
-                      <div class="section-headline margin-top-25 margin-bottom-12 left-form">
-                        <h5 class="input-text">Last Name</h5>
-                      </div>
-                      <input class="input-box input-boxes left-form" placeholder />
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-md-6" style="margin-top: 20px;">
-                    <div class="section-headline margin-top-25 margin-bottom-12">
-                      <h5 class="input-text">Email Address</h5>
-                    </div>
-                    <input class="input-box" placeholder />
-                  </div>
-
-                  <div class="col-xl-6 col-md-6" style="margin-top: 20px;">
-                    <div class="section-headline margin-top-25 margin-bottom-12">
-                      <h5 class="input-text">Password</h5>
-                    </div>
-                    <input class="input-box" placeholder />
-                  </div>
-
-                  <div class="col-xl-6 col-md-6" style="margin-top: 20px;">
-                    <div class="section-headline margin-top-25 margin-bottom-12">
-                      <h5 class="input-text">Confirm Password</h5>
-                    </div>
-                    <input class="input-box" placeholder />
-                  </div>
-                  <div class="reg-btn-block" style="margin-top: 20px;">
-                    <button class="btn-reg">Register</button>
-                  </div>
-                  <p class="account1" style="margin-top: 20px;">
-                    Already registered
-                    <a href="/errands.html" class="login-span-link">
-                      <span class="login-span" id="login-span">Login</span>
-                    </a>
-                  </p>
-                </form>
-              </div>
+         <div class="tab-content py-3" id="myTabContent">
+           <div class="tab-pane fade" :class="{'active show': isActive('login')}" id="login">
+            <div class="login-container">
+              <h2>Login</h2>
+              <p class="sub">Enter your details and make sure you protect your details from hackers</p>
+              <form class="form-container">
+                <div class="form-group">
+                  <label>Phone Number</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                    <input type="password" class="form-control">
+                </div>
+                <router-link to="/forgot-password" class="forgot-password">forgot password?</router-link>
+                <div class="form-group form-check mt-4">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+                <button class="btn btn-sm login-btn">Login</button>
+              </form>
+              <p class="text-center register-text">You don't have an account?<a href="/register" class="register-link"> Register</a></p>
             </div>
-          </div>
+           </div>
+            <div class="tab-pane fade" :class="{'active show': isActive('register')}" id="register">
+            <div class="register-container">
+              <h2>Create an account</h2>
+              <p class="sub">Fill in your details to register and start gofering</p>
+              <form class="form-container">
+                 <div class="row mb-3 row__container">
+                    <div class="col">
+                      <label for="">First Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                      <label for="">Last Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                <div class="form-group">
+                  <label>Phone Number</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                    <input type="password" class="form-control">
+                    <div class="password-strength">
+                      <div class="step1"></div>
+                      <div class="step2"></div>
+                      <div class="step3"></div>
+                      <div class="step4"></div>
+                      <div class="step5"></div>
+                    </div>
+                    <p class="password-text">Very Weak</p>
+                </div>
+                <div class="form-group">
+                  <label>Confirm Password</label>
+                    <input type="password" class="form-control">
+                </div>
+                <button class="btn btn-sm register-btn">Register</button>
+              </form>
+              <p class="text-center register-text">Already registered?<a href="/login" class="register-link"> Login</a></p>
+            </div>
+           </div>
         </div>
       </div>
-
-      <div class="col-md-6 left-block">
-        <div class="jumbotron bg-transparent text-white text-center">
-          <img src="@/assets/img/auth-img.png" class="logo-image" alt="mobile view" />
-          <h1 class="display text-header">Get stuffs Done for you.</h1>
-          <p class="lead">
-            A large network of people are available to run errands and
-            <br />execute tasks for you.
-          </p>
-        </div>
-      </div>
-    </div>
+    </section>
   </main>
 </template>
 
 <script>
 export default {
-  data() {
+  data(){
     return {
-      activeItem: "login",
-      rememberme: false
-    };
+      activeItem: 'login'
+    }
   },
   methods: {
     isActive(menuItem) {
@@ -151,694 +104,253 @@ export default {
       this.activeItem = menuItem;
     }
   }
-};
+}
 </script>
- 
+
 <style scoped>
-main {
-  overflow-x: hidden !important;
+
+#login .auth-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* LOGIN PAGE START */
-
-.logo-image {
-  width: 4rem;
-  margin-top: 8rem;
-}
-
-.left-block {
-  background-color: #eef6f9;
-}
-
-#login .left-block {
+#login .auth-container .auth-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../assets/img/login-img.png");
   height: 100vh;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.text-header {
-  margin-top: 1rem;
-  font-size: 30px;
+#login .auth-container .auth-image img {
+  width: 20%;
 }
 
-.right-side {
-  background-color: #eef6f9;
+#login .auth-container .auth-image h3 {
+  letter-spacing: 0.72px;
+  color: #FFFFFF;
+  text-shadow: 0px 3px 6px #00000029;
+  font-weight: 700;
 }
 
-.login-block {
-  margin-top: 80px;
-}
-
-.login-header {
-  color: #0086b9;
-  font-weight: 900;
-  font-size: 38px;
-  margin-bottom: 0px;
-  margin-top: 30px;
-  margin-left: 10px;
-}
-
-.lb-header {
-  margin-top: 30px;
-  margin-left: -9rem;
+#login .auth-container .auth-image p {
+  width: 87%;
   text-align: center;
-  justify-content: space-between;
 }
 
-.login-link,
-.register-link {
-  font-size: 16px;
-  color: #0086b9;
+#login .auth-container .auth-main {
+  padding: 40px 100px;
+}
+
+#login .auth-container .login-container {
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 16px;
+  flex-direction: column;
+}
+
+#login .auth-container .login-container h2 {
+  color: #0086B9;
+  margin: 30px 0px 20px 0px;
+}
+
+#login .auth-container .login-container .sub {
+  color: #7A9BA8D8;
+  font-size: 15px;
+  width: 81%;
+}
+
+#login .auth-container .form-container {
+  margin-top: 30px;
+}
+
+#login .auth-container .form-container label {
+  color: #7A9BA8D8;
   font-weight: 600;
 }
 
-.login-link {
-  margin-right: 10rem;
+#login .auth-container .form-container input {
+  border: 1px solid #7A9BA8D8;
+  border-radius: 10px;
+  box-shadow: none !important;
+  outline: none !important;
+  width: 81%;
 }
 
-.login-link:hover {
+#login .forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  text-transform: capitalize;
+  width: 81%;
+  letter-spacing: 0.36px;
+  color: #0086B9;
+  margin-top: -12px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+#login .login-btn {
+  background: #0086B9;
+  border-radius: 10px;
+  width: 70%;
+  padding: 12px 0px;
+  color: #FFFFFF;
+  margin-left: 30px;
+  margin-top: 50px;
+  font-weight: 700;
+}
+
+#login .register-link {
+  color: #0086B9;
   text-decoration: none;
 }
 
-.forgot-pass {
-  color: #0086b9;
+#login .register-text {
+  color: #292929;
+  text-align: center;
+  width: 81%;
+  position: absolute;
+  bottom: 29px;
+  left: 4%;
+  margin: auto;
 }
 
-.password-block {
-  text-align: right;
-  margin-right: 1rem;
+#login .auth-container .register-container {
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 16px;
+  flex-direction: column;
 }
 
-.register-link:hover {
-  text-decoration: none;
+#login .auth-container .register-container h2 {
+  color: #0086B9;
+  margin: 10px 0px 10px 0px;
 }
 
-.register-link.active {
-  text-decoration: none;
-  color: #c8ccce;
-  padding: 05px 1px;
-  font-size: 14px;
+#login .auth-container .register-container .sub {
+  color: #7A9BA8D8;
+  font-size: 15px;
+  width: 81%;
 }
 
-.login-link.active {
-  text-decoration: none;
-  color: #c8ccce;
-  padding: 05px 1px;
+#login .auth-container .form-container {
+  margin-top: 10px;
 }
 
-.login-text {
-  margin-bottom: 0px;
-  margin-left: 10px;
-  color: #c8ccce;
+#login .auth-container .form-container .row__container {
+  width: 94%;
 }
 
-.input-box {
-  width: 30rem;
-  padding: 0.7rem;
-  border: 1px solid #c5eaf8;
-}
-
-.input-text {
-  color: #c8ccce;
-  font-size: 18px;
+#login .auth-container .form-container label {
+  color: #7A9BA8D8;
   font-weight: 600;
 }
 
-.login-btn-block {
-  margin-left: 9rem;
-  margin-top: 40px;
+#login .auth-container .form-container input {
+  border: 1px solid #7A9BA8D8;
+  border-radius: 10px;
+  box-shadow: none !important;
+  outline: none !important;
+  width: 81%;
 }
 
-.btn-login {
-  padding: 0.7rem 4rem;
-  border-radius: 9px;
-  color: #fff;
-  background-color: #0086b9;
-  border: none;
+#login .forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  text-transform: capitalize;
+  width: 81%;
+  letter-spacing: 0.36px;
+  color: #0086B9;
+  margin-top: -12px;
+  text-decoration: none;
+  font-size: 13px;
 }
 
-.btn-login:hover {
-  padding: 0.7rem 4rem;
-  border-radius: 9px;
-  color: #fff !important;
-  background-color: #0086b9;
-  border: none;
+#login .register-btn {
+  background: #0086B9;
+  border-radius: 10px;
+  width: 70%;
+  padding: 12px 0px;
+  color: #FFFFFF;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+#login .register-link {
+  color: #0086B9;
   text-decoration: none;
 }
 
-.account {
-  margin-top: 105px;
-  margin-left: 7rem;
-  color: #000000;
+#login .register-text {
+  color: #292929;
+  text-align: center;
+  width: 81%;
+  position: absolute;
+  bottom: 10px;
+  left: 4%;
+  margin: auto;
 }
 
-a .login-span {
-  color: #0086b9;
-}
-
-a .login-span:hover {
-  color: #0086b9;
-}
-
-.login-span-link:hover {
-  text-decoration: none;
-}
-
-.email-login {
-  margin-left: 90px;
-}
-
-.email-signup {
-  margin-left: 90px;
-  margin-top: -37.5rem;
-}
-
-/* Register  */
-
-.register-block {
-  margin-top: 40px;
-}
-
-.account-input {
+#login .password-strength {
+  padding: 10px 7px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 81%;
 }
 
-.left-form {
-  margin-left: -8rem;
+#login .password-strength .step1 {
+  width: 65px;
+  height: 2px;
+  border-radius: 10px;
+  background: #B90000;
 }
 
-.input-boxes {
-  /* width: 20%; */
-  padding: 0.7rem 0.8rem;
-  width: 14rem;
+#login .password-strength .step2,
+#login .password-strength .step3,
+#login .password-strength .step4,
+#login .password-strength .step5
+{
+  width: 65px;
+  height: 2px;
+  background: #7A9BA8D8;
+  border-radius: 10px;
 }
 
-.btn-reg {
-  padding: 0.7rem 4rem;
-  border-radius: 9px;
-  color: #fff;
-  background-color: #0086b9;
+#login .password-text {
+  color: #B90000;
+  text-align: end;
+  font-size: 12px;
+  width: 80%;
+}
+</style>
+
+<style>
+
+.nav {
+  width: 34%;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #0086B9;
+  font-weight: bold;
+  background-color: transparent;
   border: none;
-  outline: none;
 }
 
-.reg-btn-block {
-  margin-left: 9rem;
+.nav-tabs .nav-link {
+  border: none;
+  color: #7A9BA8D9;
 }
 
-.account1 {
-  margin-left: 9rem;
-  color: #000000;
-}
-
-a.register-span:hover {
-  margin-left: 9rem;
-  color: #0086b9;
-  text-decoration: none !important;
-}
-
-.register-span-link:hover {
-  text-decoration: none;
-}
-
-/* MEDIA QUERIES */
-
-@media (max-width: 1024px) {
-  /* Login & Register  */
-  .email-login,
-  .email-signup {
-    margin-left: 45px;
-  }
-
-  .email-signup {
-    margin-top: -34rem;
-  }
-
-  .lb-header {
-    margin-right: 40px;
-  }
-
-  .login-link {
-    margin-right: 06rem;
-  }
-
-  .input-box {
-    width: 23rem;
-    padding: 0.7rem 8rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .login-btn-block,
-  .reg-btn-block {
-    margin-left: 6.5rem;
-  }
-  .account,
-  .account1 {
-    margin-left: 6rem;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 11rem;
-  }
-
-  .left-form {
-    margin-left: -9rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .email-login {
-    margin-left: 15px;
-  }
-
-  .lb-header {
-    margin-left: 125px;
-  }
-
-  .login-link {
-    margin-right: 06rem;
-  }
-
-  .input-box {
-    width: 20rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .login-btn-block {
-    margin-left: 5.5rem;
-    margin-top: 50px;
-  }
-  .account {
-    margin-top: 50px;
-    margin-left: 4rem;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 9rem;
-  }
-
-  .left-form {
-    margin-left: -9rem;
-  }
-
-  .login-btn-block {
-    margin-left: 5.5rem;
-    margin-top: 50px;
-  }
-
-  .reg-btn-block {
-    margin-left: 5rem;
-  }
-}
-
-@media (max-width: 800px) {
-  /* Login & Register  */
-  .email-login {
-    margin-left: 15px;
-  }
-
-  .email-signup {
-    margin-left: 15px;
-    margin-top: -33rem;
-  }
-
-  .lb-header {
-    margin-left: 25px;
-  }
-
-  .input-box {
-    width: 20rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .login-btn-block {
-    margin-left: 5.5rem;
-    margin-top: 50px;
-  }
-  .account {
-    margin-left: 6rem;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 9rem;
-  }
-
-  .left-form {
-    margin-left: -6rem;
-  }
-
-  .reg-btn-block {
-    margin-left: 5rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .left-form {
-    margin-left: -7.5rem;
-  }
-
-  .lb-header {
-    margin-left: 100px;
-  }
-
-  .email-login {
-    margin-left: 90px;
-  }
-
-  .email-signup {
-    margin-left: 90px;
-    margin-top: -30rem;
-  }
-
-  .left-side {
-    display: none;
-  }
-
-  .input-box {
-    width: 30rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .login-btn-block {
-    margin-left: 9.5rem;
-    margin-top: 50px;
-  }
-
-  .account {
-    margin-top: 50px;
-    margin-left: 7rem;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 14.5rem;
-  }
-
-  .left-form {
-    margin-left: -5.5rem;
-  }
-
-  .reg-btn-block {
-    margin-left: 9rem;
-  }
-
-  .account1 {
-    margin-left: 9rem;
-  }
-}
-
-@media (max-width: 666px) {
-  .email-signup {
-    margin-left: 80px;
-  }
-  .lb-header {
-    margin-left: 90px;
-  }
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 13.5rem;
-  }
-
-  .left-form {
-    margin-left: -2rem;
-  }
-
-  .reg-btn-block {
-    margin-left: 9rem;
-  }
-
-  .account1 {
-    margin-left: 9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .account {
-    margin-top: 50px;
-    margin-left: 6rem;
-  }
-
-  .input-box {
-    width: 22rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 9.5rem;
-  }
-
-  .left-form {
-    margin-left: -3rem;
-  }
-
-  .reg-btn-block {
-    margin-left: 6rem;
-  }
-
-  .login-btn-block {
-    margin-left: 6rem;
-  }
-
-  .account1 {
-    margin-left: 6rem;
-  }
-
-  .email-signup {
-    margin-left: 80px;
-    margin-top: -35rem;
-  }
-
-  .email-login {
-    margin-left: 80px;
-  }
-
-  .lb-header {
-    margin-left: 90px;
-  }
-}
-
-@media (max-width: 414px) {
-  .input-box {
-    width: 20rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .email-login {
-    margin-left: 25px;
-    margin-top: 2rem;
-  }
-
-  .email-signup {
-    margin-left: 25px;
-    margin-top: -32.5rem;
-  }
-
-  .lb-header {
-    margin-right: 25px;
-  }
-
-  .login-link {
-    margin-right: 3rem;
-  }
-
-  .login-btn-block {
-    margin-left: 5.5rem;
-    margin-top: 50px;
-  }
-
-  .left-form {
-    margin-left: -18px;
-  }
-
-  .account {
-    margin-top: 50px;
-    margin-left: 4rem;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 9.7rem;
-  }
-
-  .reg-btn-block {
-    margin-left: 5rem;
-  }
-  .account1 {
-    margin-left: 5rem;
-  }
-}
-
-@media (max-width: 410px) {
-  .input-box {
-    width: 20rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 9.9rem;
-  }
-
-  .email-login {
-    margin-left: 25px;
-  }
-  /* .email-signup {
-    margin-top: -31rem;
-  } */
-
-  .sign-upp {
-    margin-top: -1rem;
-  }
-
-  .lb-header {
-    margin-left: 35px;
-  }
-
-  .login-btn-block {
-    margin-left: 5.5rem;
-    margin-top: 50px;
-  }
-
-  .account {
-    margin-top: 50px;
-    margin-left: 4rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .account {
-    margin-top: 50px;
-    margin-left: 2rem;
-  }
-  .input-box {
-    width: 17rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .login-btn-block {
-    margin-left: 4rem;
-    margin-top: 50px;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 7.9rem;
-  }
-
-  .left-form {
-    margin-left: -1.5rem;
-  }
-
-  .reg-btn-block {
-    margin-left: 3.5rem;
-  }
-  .account1 {
-    margin-left: 3.5rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .input-box {
-    width: 17rem;
-    padding: 0.7rem 1rem;
-    border: 1px solid #c5eaf8;
-  }
-
-  .email-login {
-    margin-left: 20px;
-  }
-
-  /* .email-signup {
-    margin-top: -36rem;
-  } */
-
-  .lb-header {
-    margin-left: 30px;
-  }
-
-  .login-btn-block {
-    margin-left: 4.5rem;
-    margin-top: 50px;
-  }
-
-  .account {
-    margin-top: 50px;
-    margin-left: 2rem;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 7.9rem;
-  }
-
-  .left-form {
-    margin-left: -1.5rem;
-  }
-
-  .login-header {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 320px) {
-  .input-box {
-    padding: 0.7rem 1rem;
-    border-radius: 6px;
-
-    width: 15rem;
-  }
-
-  .email-login {
-    margin-left: 25px;
-  }
-
-  .email-signup {
-    margin-top: -32rem;
-  }
-
-  .lb-header {
-    margin-left: 35px;
-  }
-
-  .login-btn-block {
-    margin-left: 3.5rem;
-    margin-top: 50px;
-  }
-
-  .account {
-    margin-top: 50px;
-    margin-left: 1rem;
-  }
-
-  .input-boxes {
-    padding: 0.7rem 0.8rem;
-    width: 7rem;
-  }
-
-  .left-form {
-    margin-left: rem;
-  }
-
-  .reg-btn-block {
-    margin-left: 2.5rem;
-  }
-
-  .account1 {
-    margin-left: 2.5rem;
-  }
+.nav-tabs {
+  border-bottom: none;
 }
 </style>

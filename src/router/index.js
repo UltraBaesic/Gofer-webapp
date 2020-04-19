@@ -21,6 +21,14 @@ export const router = new Router({
         {
           path: '/register',
           component: () => import('@/views/Register.vue')
+        },
+        {
+          path: '/forgot-password',
+          component: () => import('@/views/ForgotPassword.vue')
+        },
+        {
+          path: '/verify',
+          component: () => import('@/views/Verify.vue')
         }
       ]
     }
