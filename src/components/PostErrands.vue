@@ -1,7 +1,11 @@
 <template>
   <main id="post-errands">
     <section class="post-container">
-      <div  v-for="x in data" :key="x.id" class="post-card">
+      <div
+        v-for="x in data"
+        :key="x.id"
+        class="post-card"
+        >
         <img :src="x.imgURL" alt="">
         <p>{{x.text}}</p>
       </div>
@@ -38,7 +42,7 @@ export default {
 
 #post-errands .post-card {
   height: 42px;
-  border: 1px solid rgba(190, 212, 219, 0.439);
+  box-shadow: 3px 0px 10px #0000004A;
   border-radius: 15px;
   background: #EEF6F9;
   display: flex;
@@ -48,9 +52,15 @@ export default {
   width: auto !important;
 }
 
+#post-errands .post-card:hover {
+  background: #0087BB;
+  cursor: pointer;
+  color: #ffffff !important;
+}
+
 #post-errands .continue {
   width: 127px;
-  height: 34px;
+  height: 44px;
   background: #0087BB;
   letter-spacing: 0.36px;
   color: #FFFFFF;
@@ -62,7 +72,7 @@ export default {
 #post-errands .post-card img {
   width: 20px;
   height: 20px;
-  margin-right: 23px;
+  margin-right: 16px;
   object-fit: contain;
 }
 

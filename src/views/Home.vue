@@ -56,7 +56,7 @@
             </li>
           </ul>
           <div class="tab-content py-3" id="myTabContent">
-            <div class="tab-pane fade" :class="{'active show': isActive('post')}">
+            <div class="tab-pane fade" :class="{'active show': isActive('post')}" id="post">
               <div class="d-flex justify-content-center post">
                 <div>
                   <h4>What Kind of Errand do you want done?</h4>
@@ -65,162 +65,30 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="first-errand-section">
-      <div class="first-post-section">
-        <div class="container">
-          <div class="row section-post-first">
-            <div class="col-md-6 image-block">
-              <img
-                src="@/assets/img/image2.jpeg"
-                class="img-fluid post-imagee"
-                alt="Responsive image"
-              />
-            </div>
-            <div class="col-md-6">
-              <div class="intro">
-                <h1 class="post-errand-head post-errand-head-extend">
-                  <span class="inner-heading">Post Your Errand</span> and let
-                  <br />someone do it for you
-                </h1>
-                <p class="post-errand-paragraph">
-                  You don't have to do all the work by yourself, let someone ease you off the stress
-                  <a
-                    href="wallet.html"
-                    class="app-link"
-                  >Download the Gofer App</a> now and start sending errands.
-                </p>
-                <!-- <a href="#" class="btn btn-primary">Show me how</a> -->
-              </div>
-              <div class="post-list">
-                <ul class="post-errand-list">
-                  <li class="list-item-post">Describe the errand and the reward for the errand</li>
-                  <li class="list-item-post">Wait for someone to bid or negotiate</li>
-                  <li class="list-item-post">Accept or reject bids</li>
-                  <li class="list-item-post">Track errand and end errand after errand is successful</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="second-errand-section">
-      <div class="second-post-section">
-        <div class="second-block">
-          <div class="container">
-            <div class="row section-post-second">
-              <div class="col-md-6">
-                <div class="intro">
-                  <h1 class="post-errand-head">
-                    <span class="inner-heading">Run Errands</span> for people
-                    <br />and earn cash
-                  </h1>
-                  <p
-                    class="post-errand-paragraph"
-                  >Search and bid for errands that you would like to run. Run errands and earn money after successful completion of the errand</p>
-                </div>
-                <div class="post-list">
-                  <ul class="post-errand-list">
-                    <li class="list-item-post">Search and bid for errands</li>
-                    <li class="list-item-post">Wait to be accepted by the sender</li>
-                    <li class="list-item-post">Run errand and end errand after completion</li>
-                    <li class="list-item-post">Earn Money</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-md-6 image-block">
-                <img
-                  src="@/assets/img/image2.jpeg"
-                  class="img-fluid post-image"
-                  alt="Responsive image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="third-section">
-      <div class="Third-post-section">
-        <div class="container">
-          <div class="row section-post-third">
-            <div class="col-md-6 image-block">
-              <img
-                src="@/assets/img/image2.jpeg"
-                class="img-fluid post-imagee"
-                alt="Responsive image"
-              />
-            </div>
-            <div class="col-md-6">
-              <div class="intro">
-                <h1 class="post-errand-head post-errand-head-extend-1">
-                  <span class="inner-heading">Join us</span>, be part of the
-                  <br />team that run errands
-                  <br />for us
-                </h1>
-                <p
-                  class="post-errand-paragraph"
-                >Running errands for us comes with special privileges. To join our team of errand runners you have to apply to be a special errand runner and all errands directed to Gofer will be assigned to our different errand runners in different regions</p>
-                <a href="#" class="btn btn-primary btn-apply">Apply Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="wallet">
-      <div class="wallet-section">
-        <div class="container section-wallet">
-          <div class="row">
-            <hr class="wallet-line" />
-            <h1 class="wallet-heading inner-heading">Wallet</h1>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="wallet-card">
-                <div class="illustration-box">
-                  <img src="@/assets/img/mask.png" class="illustration" alt="record illustration" />
-                </div>
-                <div class="wallet-body">
-                  <h3 class="pri-text">My Wallet</h3>
-                  <p
-                    class="sec-text"
-                  >Post an errand with all the details needed to run the errand and the amount you are willing to pay errand.</p>
+            <div class="tab-pane fade" :class="{'active show': isActive('run')}" id="run">
+              <div class="d-flex justify-content-center run">
+                <div>
+                  <h4>You can Run Errands for People</h4>
+                  <p>Everybody can run errands, make money by running errands for people. bid for errands around you and earn money on the go, no special skill required to run errands for people. You can pick up just any type of errand</p>
+                  <run-errands></run-errands>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="wallet-card">
-                <div class="illustration-box">
-                  <img src="@/assets/img/mask.png" class="illustration" alt="share illustration" />
-                </div>
-                <div class="wallet-body">
-                  <h3 class="pri-text">Wallet Pin</h3>
-                  <p
-                    class="sec-text"
-                  >Post an errand with all the details needed to run the errand and the amount you are willing to pay errand.</p>
+            <div class="tab-pane fade" :class="{'active show': isActive('get')}" id="get">
+              <div class="d-flex justify-content-center get">
+                <div>
+                  <h4>Get your Account Verified</h4>
+                  <p>Everybody can run errands, make money by running errands for people. bid for errands around you and earn money on the go, no special skill required to run errands for people. You can pick up just any type of errand</p>
+                  <get-verified></get-verified>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="wallet-card">
-                <div class="illustration-box">
-                  <img src="@/assets/img/mask.png" class="illustration" alt="voila illustration" />
-                </div>
-                <div class="wallet-body">
-                  <h3 class="pri-text">Escrow Account</h3>
-                  <p
-                    class="sec-text"
-                  >Post an errand with all the details needed to run the errand and the amount you are willing to pay errand.</p>
+            <div class="tab-pane fade" :class="{'active show': isActive('join')}" id="join">
+              <div class="d-flex justify-content-center join">
+                <div>
+                  <h4>Apply to Become a Merchant</h4>
+                  <p>You want to run our errands for us, come on board and help us help other people run errands while you make money.</p>
+                  <join-us></join-us>
                 </div>
               </div>
             </div>
@@ -228,59 +96,161 @@
         </div>
       </div>
     </section>
-
+    <section class="d-flex justify-content-between post-errand-section">
+      <div class="col-lg-6 col-md-8 col-sm-12">
+       <div class="image-background">
+         <img src="@/assets/img/Path6.svg" alt="" class="blue-background">
+         <img src="@/assets/img/home.png" alt="" class="phone-img">
+       </div>
+      </div>
+      <div class="col-lg-6 col-md-8 col-sm-12 list-post">
+        <div>
+          <h2><span class="post">Post Your Errand</span> and let someone do it for you</h2>
+          <p class="post-1">You don't have to do all the work by yourself, let someone ease you off the stress. 
+            <span class="post-2">Download the Gofer App</span> now and start sending errands.</p>
+        </div>
+        <div class="list-gofer">
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Describe the errand and the reward for the errand</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Wait for someone to bid or negotiate</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Wait for someone to bid or negotiate</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Accept or reject bids</p>
+          </div>
+           <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Track errand and end errand after errand is successful.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="run-errands">
+      <div class="col-lg-6 col-md-8 col-sm-12">
+         <div>
+          <h2><span class="post">Run Errands </span>for people and earn money</h2>
+          <p class="post-1">Search and bid for errands that you would like to run. Run errands and earn money after successful completion of the errand.</p>
+        </div>
+        <div class="list-run-errands__container">
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Search and bid for errands</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Wait to be accepted by the sender</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Run errand and end errand after completion</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Earn Money</p>
+          </div>
+           <div class="d-flex align-items-center">
+            <div class="bullet-point"></div>
+            <p class="pl-4">Track errand and end errand after errand is successful.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <div>
+          <img src="@/assets/img/home.png" alt="" class="phone-img">
+        </div>
+      </div>
+    </section>
+    <section class="join-us__section">
+      <div class="col-lg-6 col-md-8 col-sm-12 pl-0">
+        <div class="card-container">
+          <div class="big-card"></div>
+          <div class="small-card__black"></div>
+          <div class="small-card__white"></div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-8 col-sm-12 join__content">
+        <div>
+          <h2><span class="post">Join us</span>, be part of the team that run errands for us</h2>
+          <p class="post-1">Running errands for us comes with special privileges. To join our team of errand runners you have to apply to be a special errand runner and all errands directed to Gofer will be assigned to our different errand runners in different regions.</p>
+        </div>
+        <button class="btn bt-sm apply-now">
+          apply now
+        </button>
+      </div>
+    </section>
+    <section class="wallet-section">
+      <div class="wallet-top">
+        <div class="straight-line"></div>
+        <h2>wallet</h2>
+      </div>
+      <div class="d-flex justify-content-between align-items-center round-card__container">
+        <div class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center align-items-center rc__deets">
+        <div class="round-card">
+          <img src="@/assets/img/wallet.png" alt="">
+        </div>
+        <h6>my wallet</h6>
+        <p>Fund your wallet and withdraw from your wallet. Funds in your wallet is needed to post any errand</p>
+      </div>
+      <div class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center align-items-center rc__deets">
+        <div class="round-card">
+          <img src="@/assets/img/password.png" alt="">
+        </div>
+        <h6>wallet pin</h6>
+        <p>Your wallet pin is needed when you want to withdraw from your wallet. Just a little bit of extra security.</p>
+      </div>
+      <div class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center align-items-center rc__deets">
+        <div class="round-card">
+          <img src="@/assets/img/refund.png" alt="">
+        </div>
+        <h6>escrow account</h6>
+        <p>When you post an errand, the money to be paid to the runner is deducted from your wallet and saved here.</p>
+      </div>
+      </div>
+      <section class="account-reviews">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <img src="@/assets/img/home.png" alt="" class="phone-img">
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <h3>Account Reviews and account verification.</h3>
+          <p>Post an errand with all the details needed to run the errand and the amount you are willing to pay errand runner. wait for runners to bid and then accept a runner based on review.</p>
+          <img src="@/assets/img/Path-7.svg" alt="" class="side-img">
+        </div>
+      </section>
+    </section>
+    <section class="get-started">
+      <h3>Start Posting Errands and Running Errands</h3>
+      <button class="btn bt-sm">get started</button>
+    </section>
     <section>
-      <div class="review-section">
-        <div class="container">
-          <div class="row p-5">
-            <div class="col-md-6 text-center">
-              <img
-                src="@/assets/img/image2.jpeg"
-                class="post-image post-image-fourth"
-                alt="mobile view"
-              />
-            </div>
-            <div class="col-md-6 account-reviews intro pt-4">
-              <h3 class="post-errand-head">Account Reviews and account verification</h3>
-              <p class="post-errand-paragraph">
-                Post an errand with all the details needed to run the errand and the amount you are willing
-                to pay errand runner. wait for runners to bid and then accept a runner based on review
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <footer-component></footer-component>
     </section>
-
-    <section class="get-started-section">
-      <div class="get-started-outer">
-        <div class="container">
-          <div class="row p-5 get-started">
-            <div class="get-it">
-              <div class="col-xs-6 get-started-inside">
-                <div class="get-started-text">Start Posting Errands and Running Errands</div>
-              </div>
-              <div class="col-xs-6 get-started-btn-block">
-                <button class="get-started-btn">Get Started</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section></section>
   </main>
 </template>
 
 <script>
-import NavBar from "../components/Navbar";
-import PostErrands from "../components/PostErrands";
+import NavBar from '../components/Navbar'
+import PostErrands from '../components/PostErrands'
+import RunErrands from '../components/RunErrands'
+import GetVerified from '../components/GetVerified'
+import JoinUs from '../components/JoinUs'
+import FooterComponent from '../components/FooterComponent'
 
 export default {
   components: {
     NavBar,
-    PostErrands
+    PostErrands,
+    RunErrands,
+    GetVerified,
+    JoinUs,
+    FooterComponent
   },
   data() {
     return {
@@ -299,6 +269,12 @@ export default {
 </script>
 
 <style scoped>
+
+
+#home {
+  overflow: hidden;
+}
+
 #home .hero-section {
   position: relative;
   height: 800px;
@@ -372,14 +348,13 @@ export default {
 
 #home .tab-container {
   width: 65%;
-  height: 700px;
+  height: auto;
   margin: 0 auto;
-  box-shadow: 6px -6px 20px #ffffff8f;
-  background: #eef6f9;
+  box-shadow: 3px 0px 20px #0000004A;
+  background: #EEF6F9;
   border-radius: 15px;
   border: none;
-  position: absolute;
-  top: -12rem;
+  margin-top: -228px;
 }
 
 #home .nav-tabs {
@@ -400,251 +375,366 @@ export default {
   padding-bottom: 16px;
 }
 
-#home .post {
+#home .post,
+#home .run,
+#home .get,
+#home .join
+{
   text-align: center;
 }
 
-#home .post h4 {
+#home .post h4,
+#home .run h4,
+#home .get h4,
+#home .join h4
+{
   color: #292929;
   font-weight: 900;
 }
 
-#home .post p {
-  width: 53%;
+#home .post p,
+#home .run p,
+#home .get p,
+#home .join p
+{
+  width: 77%;
   margin: 0 auto;
-  color: #292929;
-}
-
-/* FIRST ERRAND SECTION */
-
-.first-post-section {
-  background-color: #eef6f9;
-  /* margin-top: 30rem; */
-}
-
-.intro {
-  text-align: left;
-}
-.section-post-first {
-  padding-top: 35rem;
-  padding-bottom: 100px;
-}
-.post-errand-head {
-  font-size: 30px;
-  font-weight: bold;
-  color: #292929;
-}
-
-.post-errand-paragraph {
-  font-size: 18px;
-  line-height: 2rem;
-  color: #292929;
-}
-
-.inner-heading {
-  color: #0086b9 !important;
-}
-
-.post-errand-list {
-  list-style: none;
-  padding-left: 15px;
-  line-height: 2rem;
-  text-align: left;
-}
-
-.post-errand-list li::before {
-  content: "\2022";
-  color: #0086b9;
-  font-weight: 800;
-  font-size: 20px;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-/* Second Post */
-.second-post-section {
-  background-color: #eef6f9;
-  box-shadow: 0px 2px 2px rgb(31, 30, 30), 0px 0px 15px rgb(231, 230, 230) !important;
-  /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 15px rgba(0, 0, 0, 0.12); */
-  /* height: 26rem; */
-}
-.section-post-second {
-  padding-top: 50px;
-  padding-bottom: 70px;
-}
-
-.list-item-post {
-  color: #000000;
-}
-
-.second-block {
-  background-color: #e8f4f9;
-}
-
-/* Third Post */
-
-.Third-post-section {
-  background-color: #eef6f9;
-}
-
-.section-post-third {
-  padding-top: 90px;
-  padding-bottom: 50px;
-}
-
-.image-block {
-  text-align: center;
-}
-
-.btn-apply {
-  padding: 0.775rem 0.99rem;
-  border-radius: 9px;
-  color: #ffffff;
-}
-
-.post-image {
-  height: 30rem;
-  margin-top: -80px;
-  /* margin-left: 60px; */
-}
-
-.post-imagee {
-  height: 30rem;
-  margin-top: -20px;
-}
-
-.wallet-section {
-  background-color: #eef6f9;
-}
-
-.section-wallet {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.wallet-line {
-  width: 10%;
-  height: 2.5px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 20px;
-  background-color: #292929 !important;
-  border: 0 none;
-}
-
-.wallet-heading {
-  margin-left: 20px;
-  font-size: 40px;
-  color: #0086b9;
-  font-weight: 700;
-}
-
-.wallet-card {
-  text-align: center;
-  border: 1px solid transparent;
-  margin-top: 30px;
-}
-
-.illustration {
-  width: rem;
-  box-shadow: 0px 2px 2px #1f1e1e, 0px 0px 15px rgb(255, 255, 255);
-}
-
-.illustration-box {
-  margin: 0 auto;
-
-  /* width: 4rem;
-    height: 4rem;  */
-  /* padding: 100px; */
-}
-
-a,
-.app-link {
-  color: #0086b9;
-  text-decoration: none;
-}
-
-a,
-.app-link:hover {
-  color: #0086b9;
-  text-decoration: none;
-}
-
-.illustration-box .illustration {
-  /* width: 100%; */
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center right;
-}
-
-.sec-text {
-  text-align: center;
   font-size: 15px;
-  line-height: 2rem;
   color: #292929;
 }
 
-.pri-text {
-  font-size: 23px;
+#home .post-errand-section {
+  padding: 60px 120px;
+}
+
+#home .post-errand-section .image-background {
+  position: relative;
+}
+
+#home .post-errand-section {
+  padding: 100px;
+}
+
+#home .post-errand-section .image-background {
+  position: relative;
+}
+
+#home .post-errand-section .image-background .blue-background {
+  width: 35rem;
+}
+
+#home .post-errand-section .image-background .phone-img {
+  width: 81%;
+  object-fit: contain;
+  position: absolute;
+  left: 46px;
+  top: -32px;
+}
+
+#home .post-errand-section .list-post {
+  padding-left: 7rem !important;
+}
+
+#home .post-errand-section .list-post h2 {
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  color: #07719A;
+  width: 80%;
+}
+
+#home .post-errand-section .list-post .post {
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  letter-spacing: 1.02px;
+}
+
+#home .post-errand-section .list-post .post-1 {
+  color: #515151;
+  font-size: 20px;
+  width: 76%;
+  font-weight: 400;
+}
+
+#home .post-errand-section .list-post .post-2 {
+  color: #07719A;
+  font-weight: 400;
+}
+
+#home .post-errand-section .list-gofer .bullet-point {
+  width: 8px;
+  height: 8px;
+  background: #0086B9;
+  border-radius: 100%;
+  margin-top: 0px;
+}
+
+#home .post-errand-section .list-gofer p {
+  color: #515151;
   font-weight: 500;
-  color: #292929;
-  font-weight: 700;
+  padding-top: 10px;
+  font-size: 14px;
+  padding: 0;
+  margin: 7px;
 }
 
-.wallet-body {
-  flex: 1 1 auto;
-  padding: 1.25rem;
-}
-
-/* REVIEW SECTION */
-.review-section {
-  background-color: #eef6f9;
-}
-.account-reviews {
+#home .run-errands {
+  padding: 60px 100px;
+  box-shadow: 3px 0px 20px #0000004A;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #E8F4F9;
+}
+
+#home .run-errands h2 {
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  width: 80%;
+}
+
+#home .run-errands .post {
+  font-size: 39px;
+  font-weight: bold;
+  color: #07719A;
+}
+
+#home .run-errands .post-1 {
+  color: #515151;
+  font-size: 20px;
+  width: 76%;
+  font-weight: 400;
+}
+
+#home .run-errands .post-2 {
+  color: #07719A;
+  font-weight: 400;
+}
+
+#home .run-errands .list-run-errands__container .bullet-point {
+  width: 8px;
+  height: 8px;
+  background: #0086B9;
+  border-radius: 100%;
+  margin-top: 0px;
+}
+
+#home .run-errands .list-run-errands__container p {
+  color: #515151;
+  font-weight: 500;
+  padding-top: 10px;
+  font-size: 14px;
+  padding: 0;
+  margin: 7px;
+}
+
+#home .run-errands .phone-img {
+  width: 81%;
+}
+
+#home .join-us__section {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home .join-us__section .card-container {
+  width: 30rem;
+  height: 27rem;
+  position: relative;
+}
+
+#home .join-us__section .big-card {
+  width: 24rem;
+  height: 25rem;
+  background: #13F7FF;
+}
+
+#home .join-us__section .small-card__black {
+  width: 17rem;
+  height: 14rem;
+  background: #000000;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 15%;
+  right: 0
+}
+
+#home .join-us__section .small-card__white {
+  width: 17rem;
+  height: 14rem;
+  background: #ffffff;
+  box-shadow: 0px 3px 22px #68686854;
+  border-radius: 10px;
+  position: absolute;
+  top: 18.5%;
+  right: -7%;
+}
+
+#home .join-us__section .join__content h2{
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  width: 80%;
+}
+
+#home .join-us__section .join__content .post{
+  font-size: 39px;
+  font-weight: bold;
+  color: #07719A;
+}
+
+#home .join-us__section .join__content .post-1 {
+  color: #515151;
+  font-size: 20px;
+  width: 76%;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+#home .join-us__section .apply-now {
+  margin-top: 30px;
+  background: #0087BB;
+  color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+#home .wallet-section {
   justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.get-started-btn {
-  margin-left: 8rem;
-  padding: 0.5rem 2rem;
-  border-radius: 9px;
-  background-color: #0086b9;
-  color: #fff;
-  font-size: 25px;
-  font-weight: 800;
-  border: #0086b9;
+#home .wallet-section .wallet-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 32%;
+  padding: 40px;
 }
 
-.get-started-inside {
+#home .wallet-section .wallet-top .straight-line {
+  height: 3px;
+  width: 160px;
+  background: #515151;
+}
+
+#home .wallet-section .wallet-top h2 {
+  color: #0086B9;
+  letter-spacing: 1.02px;
+  font-size: 36px;
+  text-transform: capitalize;
+}
+
+#home .wallet-section .round-card__container {
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+#home .wallet-section .round-card__container .round-card {
+  width: 8rem;
+  height: 8rem;
+  background: #E6F3F8;
+  border-radius: 100%;
+  box-shadow: -6px -6px 20px #FFFFFF, 0px 3px 8px #00000029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home .wallet-section .rc__deets {
+  flex-direction: column;
+}
+
+#home .wallet-section .round-card__container .round-card img {
+  width: 40%;
+  object-fit: contain;
+}
+
+#home .wallet-section .round-card__container h6 {
+  font-weight: bold;
+  letter-spacing: 0.36px;
+  color: #515151;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 24px 0px;
+}
+
+#home .wallet-section .round-card__container p {
+  color: #515151;
+  font-size: 16px;
   text-align: center;
 }
 
-.get-started-btn-block {
-  text-align: left;
-  padding-top: 0px;
-}
-
-.get-started-text {
-  color: #292929;
-  font-size: 30px;
-  font-weight: 800;
-  /* margin-right: 40px; */
-}
-
-.get-it {
+#home .account-reviews {
+  position: relative;
+  padding: 60px 0px 60px 60px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
-.get-started-outer {
-  background-color: rgb(219, 237, 243);
+#home .account-reviews .phone-img {
+  width: 81%;
+  object-fit: contain;
 }
 
-.get-started p {
-  font-size: 2rem;
+#home .account-reviews h3 {
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  width: 80%;
 }
+
+#home .account-reviews p {
+  color: #515151;
+  font-size: 20px;
+  width: 76%;
+  font-weight: 400;
+  margin-top: 20px;
+  letter-spacing: 0.36px;
+}
+
+#home .account-reviews .side-img {
+  position: absolute;
+  width: 80%;
+  top: -250px;
+  right: -37%;
+}
+
+#home .get-started {
+  padding: 70px 108px;
+  background: #0086B919;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home .get-started h3 {
+  color: #707070;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#home .get-started button {
+  border-radius: 15px;
+  background: #0086B9;
+  padding: 17px 30px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
 </style>
