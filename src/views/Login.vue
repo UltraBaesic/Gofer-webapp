@@ -15,7 +15,7 @@
             class="register-link"
             id="register-box-link"
             @click.prevent="setActive('register')"
-            :class="{ active: isActive('register')}"
+            :class="{ active: isActive('register') }"
           >Register</a>
         </div>
 
@@ -24,8 +24,8 @@
             <div class="d-flex justify-content-center">
               <div>
                 <form class="email-login">
-                  <h1 class="login-header">Welcome Back</h1>
-                  <p class="login-text">Fill in your details to register and start gofering</p>
+                  <h1 class="login-header">Login</h1>
+                  <p class="login-text">Enter your details and make sure protect your details from hackers</p>
 
                   <div class="col-xl-6 col-md-6" style="margin-top: 40px;">
                     <div class="section-headline margin-top-25 margin-bottom-12">
@@ -39,6 +39,14 @@
                       <h5 class="input-text">Password</h5>
                     </div>
                     <input class="input-box" placeholder />
+                  </div>
+                  <div class="password-block">
+                    <a href="#" class="forgot-pass" @click.prevent>Forgot Password?</a>
+                  </div>
+                  <div id="checkbox">
+                    <input type="checkbox" value="" class="checkboxme" v-model="rememberme" />
+
+                    <label for="check">Remember me</label>
                   </div>
                   <div class="login-btn-block">
                     <a href="./errands.html" class="btn-login">Login</a>
@@ -114,7 +122,14 @@
       </div>
 
       <div class="col-md-6 left-block">
-        <div class="left-side"></div>
+        <div class="jumbotron bg-transparent text-white text-center">
+          <img src="@/assets/img/auth-img.png" class="logo-image" alt="mobile view" />
+          <h1 class="display text-header">Get stuffs Done for you.</h1>
+          <p class="lead">
+            A large network of people are available to run errands and
+            <br />execute tasks for you.
+          </p>
+        </div>
       </div>
     </div>
   </main>
@@ -124,7 +139,8 @@
 export default {
   data() {
     return {
-      activeItem: "login"
+      activeItem: "login",
+      rememberme: ''
     };
   },
   methods: {
@@ -145,19 +161,26 @@ main {
 
 /* LOGIN PAGE START */
 
-.logo {
-  width: 9rem;
+.logo-image {
+  width: 4rem;
+  margin-top: 8rem;
 }
 
 .left-block {
   background-color: #eef6f9;
 }
 
-.left-side {
-  background-image: url("../assets/img/mask.png");
+#login .left-block {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/img/login-img.png");
   height: 100vh;
   background-position: center;
   background-size: cover;
+}
+
+.text-header {
+  margin-top: 1rem;
+  font-size: 30px;
 }
 
 .right-side {
@@ -179,7 +202,7 @@ main {
 
 .lb-header {
   margin-top: 30px;
-  margin-left: 140px;
+  margin-left: -9rem;
   text-align: center;
   justify-content: space-between;
 }
@@ -199,43 +222,53 @@ main {
   text-decoration: none;
 }
 
+.forgot-pass {
+  color: #0086b9;
+}
+
+.password-block {
+  text-align: right;
+  margin-right: 1rem;
+}
+
 .register-link:hover {
   text-decoration: none;
 }
 
 .register-link.active {
   text-decoration: none;
-  border-bottom: 1px solid #0086b9;
+  color: #c8ccce;
   padding: 05px 1px;
+  font-size: 14px;
 }
 
 .login-link.active {
   text-decoration: none;
-  border-bottom: 1px solid #0086b9;
+  color: #c8ccce;
   padding: 05px 1px;
 }
 
 .login-text {
   margin-bottom: 0px;
   margin-left: 10px;
-  color: #000000;
+  color: #c8ccce;
 }
 
 .input-box {
   width: 30rem;
-  padding: 0.7rem 8rem;
+  padding: 0.7rem;
   border: 1px solid #c5eaf8;
 }
 
 .input-text {
-  color: #292929;
+  color: #c8ccce;
   font-size: 18px;
   font-weight: 600;
 }
 
 .login-btn-block {
   margin-left: 9rem;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .btn-login {
@@ -279,7 +312,7 @@ a .login-span:hover {
 
 .email-signup {
   margin-left: 90px;
-  margin-top: -34.5rem;
+  margin-top: -37.5rem;
 }
 
 /* Register  */
