@@ -140,7 +140,7 @@ export default {
   data() {
     return {
       activeItem: "login",
-      rememberme: ''
+      rememberme: false
     };
   },
   methods: {
