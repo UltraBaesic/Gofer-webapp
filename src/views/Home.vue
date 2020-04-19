@@ -72,13 +72,13 @@
       </div>
     </section>
     <section class="d-flex justify-content-between post-errand-section">
-      <div class="col-lg-5 col-md-8 col-sm-12">
+      <div class="col-lg-6 col-md-8 col-sm-12">
        <div class="image-background">
          <img src="@/assets/img/Path6.svg" alt="" class="blue-background">
          <img src="@/assets/img/home.png" alt="" class="phone-img">
        </div>
       </div>
-      <div class="col-lg-7 col-md-8 col-sm-12 pl-5 list-post">
+      <div class="col-lg-6 col-md-8 col-sm-12 list-post">
         <div>
           <h2><span class="post">Post Your Errand</span> and let someone do it for you</h2>
           <p class="post-1">You don't have to do all the work by yourself, let someone ease you off the stress. 
@@ -167,25 +167,45 @@
         <h2>wallet</h2>
       </div>
       <div class="d-flex justify-content-between align-items-center round-card__container">
-        <div class="col-lg-4 col-md-8 col-sm-12">
+        <div class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center align-items-center rc__deets">
         <div class="round-card">
           <img src="@/assets/img/wallet.png" alt="">
         </div>
         <h6>my wallet</h6>
+        <p>Fund your wallet and withdraw from your wallet. Funds in your wallet is needed to post any errand</p>
       </div>
-      <div class="col-lg-4 col-md-8 col-sm-12">
+      <div class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center align-items-center rc__deets">
         <div class="round-card">
           <img src="@/assets/img/password.png" alt="">
         </div>
         <h6>wallet pin</h6>
+        <p>Your wallet pin is needed when you want to withdraw from your wallet. Just a little bit of extra security.</p>
       </div>
-      <div class="col-lg-4 col-md-8 col-sm-12">
+      <div class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center align-items-center rc__deets">
         <div class="round-card">
           <img src="@/assets/img/refund.png" alt="">
         </div>
         <h6>escrow account</h6>
+        <p>When you post an errand, the money to be paid to the runner is deducted from your wallet and saved here.</p>
       </div>
       </div>
+      <section class="account-reviews">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <img src="@/assets/img/home.png" alt="" class="phone-img">
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <h3>Account Reviews and account verification.</h3>
+          <p>Post an errand with all the details needed to run the errand and the amount you are willing to pay errand runner. wait for runners to bid and then accept a runner based on review.</p>
+          <img src="@/assets/img/Path-7.svg" alt="" class="side-img">
+        </div>
+      </section>
+    </section>
+    <section class="get-started">
+      <h3>Start Posting Errands and Running Errands</h3>
+      <button class="btn bt-sm">get started</button>
+    </section>
+    <section>
+      <footer-component></footer-component>
     </section>
   </main>
 </template>
@@ -196,6 +216,7 @@ import PostErrands from '../components/PostErrands'
 import RunErrands from '../components/RunErrands'
 import GetVerified from '../components/GetVerified'
 import JoinUs from '../components/JoinUs'
+import FooterComponent from '../components/FooterComponent'
 
 export default {
   components: {
@@ -203,7 +224,8 @@ export default {
     PostErrands,
     RunErrands,
     GetVerified,
-    JoinUs
+    JoinUs,
+    FooterComponent
   },
   data(){
     return {
@@ -367,15 +389,19 @@ export default {
 }
 
 #home .post-errand-section .image-background .blue-background {
-  width: 26rem;
+  width: 35rem;
 }
 
 #home .post-errand-section .image-background .phone-img {
-  width: 73%;
+  width: 81%;
   object-fit: contain;
   position: absolute;
   left: 46px;
   top: -32px;
+}
+
+#home .post-errand-section .list-post {
+  padding-left: 7rem !important;
 }
 
 #home .post-errand-section .list-post h2 {
@@ -395,7 +421,7 @@ export default {
 
 #home .post-errand-section .list-post .post-1 {
   color: #515151;
-  font-size: 14px;
+  font-size: 20px;
   width: 76%;
   font-weight: 400;
 }
@@ -446,7 +472,7 @@ export default {
 
 #home .run-errands .post-1 {
   color: #515151;
-  font-size: 14px;
+  font-size: 20px;
   width: 76%;
   font-weight: 400;
 }
@@ -474,7 +500,7 @@ export default {
 }
 
 #home .run-errands .phone-img {
-  width: 90%;
+  width: 81%;
 }
 
 #home .join-us__section {
@@ -533,7 +559,7 @@ export default {
 
 #home .join-us__section .join__content .post-1 {
   color: #515151;
-  font-size: 14px;
+  font-size: 20px;
   width: 76%;
   font-weight: 400;
   margin-top: 20px;
@@ -552,7 +578,6 @@ export default {
 }
 
 #home .wallet-section {
-  padding: 100px 40px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -562,7 +587,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 26%;
+  width: 32%;
+  padding: 40px;
 }
 
 #home .wallet-section .wallet-top .straight-line {
@@ -579,7 +605,7 @@ export default {
 }
 
 #home .wallet-section .round-card__container {
-  width: 70%;
+  width: 87%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
@@ -596,16 +622,87 @@ export default {
   align-items: center;
 }
 
+#home .wallet-section .rc__deets {
+  flex-direction: column;
+}
+
 #home .wallet-section .round-card__container .round-card img {
   width: 40%;
   object-fit: contain;
 }
 
 #home .wallet-section .round-card__container h6 {
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 0.36px;
   color: #515151;
-  font-size: 15px;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 24px 0px;
+}
+
+#home .wallet-section .round-card__container p {
+  color: #515151;
+  font-size: 16px;
+  text-align: center;
+}
+
+#home .account-reviews {
+  position: relative;
+  padding: 60px 0px 60px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+#home .account-reviews .phone-img {
+  width: 81%;
+  object-fit: contain;
+}
+
+#home .account-reviews h3 {
+  color: #515151;
+  font-size: 39px;
+  font-weight: bold;
+  width: 80%;
+}
+
+#home .account-reviews p {
+  color: #515151;
+  font-size: 20px;
+  width: 76%;
+  font-weight: 400;
+  margin-top: 20px;
+  letter-spacing: 0.36px;
+}
+
+#home .account-reviews .side-img {
+  position: absolute;
+  width: 80%;
+  top: -250px;
+  right: -37%;
+}
+
+#home .get-started {
+  padding: 70px 108px;
+  background: #0086B919;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home .get-started h3 {
+  color: #707070;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#home .get-started button {
+  border-radius: 15px;
+  background: #0086B9;
+  padding: 17px 30px;
+  color: #ffffff;
+  font-weight: 700;
   text-transform: capitalize;
 }
 

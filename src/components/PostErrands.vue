@@ -72,7 +72,7 @@ export default {
 #post-errands .post-card img {
   width: 20px;
   height: 20px;
-  margin-right: 23px;
+  margin-right: 16px;
   object-fit: contain;
 }
 
