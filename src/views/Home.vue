@@ -2,15 +2,20 @@
   <main id="home">
     <section class="hero-section">
       <nav-bar></nav-bar>
-       <div class="banner">
-          <div class="jumbotron bg-transparent text-white text-center">
-            <h1 class="display-4">Get someone to do your tasks for you</h1>
-            <p class="lead">Get connected to someone who can run your errands for you while you do your thing. You can run just any type of errand. <span class="start-now"> Start Now</span></p>
-            <div class="images">
-                <img class="mobile-img1" src="@/assets/img/appstore.png" alt="appstore">
-                <img class="mobile-img" src="@/assets/img/playstore.png" alt="appstore">
-            </div>
+      <div class="banner">
+        <div class="jumbotron bg-transparent text-white text-center">
+          <h1 class="display-4">Get someone to do your tasks for you</h1>
+          <p class="lead">
+            Get connected to someone who can run your errands for you while you do your thing. You can run just any type of errand.
+            <span
+              class="start-now"
+            >Start Now</span>
+          </p>
+          <div class="images">
+            <img class="mobile-img1" src="@/assets/img/appstore.png" alt="appstore" />
+            <img class="mobile-img" src="@/assets/img/playstore.png" alt="appstore" />
           </div>
+        </div>
       </div>
     </section>
     <section class="tab-section">
@@ -18,16 +23,36 @@
         <div class="tab-list">
           <ul class="nav nav-tabs nav-justified">
             <li class="nav-item">
-              <a class="nav-link" @click.prevent="setActive('post')" :class="{ active: isActive('post') }" href="#post">Post Errands</a>
+              <a
+                class="nav-link"
+                @click.prevent="setActive('post')"
+                :class="{ active: isActive('post') }"
+                href="#post"
+              >Post Errands</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click.prevent="setActive('run')" :class="{ active: isActive('run') }" href="#run">Run Errands</a>
+              <a
+                class="nav-link"
+                @click.prevent="setActive('run')"
+                :class="{ active: isActive('run') }"
+                href="#run"
+              >Run Errands</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click.prevent="setActive('get')" :class="{ active: isActive('get') }" href="#get">Get Verified</a>
+              <a
+                class="nav-link"
+                @click.prevent="setActive('get')"
+                :class="{ active: isActive('get') }"
+                href="#get"
+              >Get Verified</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click.prevent="setActive('join')" :class="{ active: isActive('join') }" href="#join">Join us</a>
+              <a
+                class="nav-link"
+                @click.prevent="setActive('join')"
+                :class="{ active: isActive('join') }"
+                href="#join"
+              >Join us</a>
             </li>
           </ul>
           <div class="tab-content py-3" id="myTabContent">
@@ -227,29 +252,35 @@ export default {
     JoinUs,
     FooterComponent
   },
-  data(){
+  data() {
     return {
-      activeItem: 'post'
-    }
+      activeItem: "post"
+    };
   },
   methods: {
-    isActive(menuItem){
-      return this.activeItem === menuItem
+    isActive(menuItem) {
+      return this.activeItem === menuItem;
     },
-    setActive(menuItem){
-      this.activeItem = menuItem
+    setActive(menuItem) {
+      this.activeItem = menuItem;
     }
   }
-}
+};
 </script>
 
 <style scoped>
+
+
+#home {
+  overflow: hidden;
+}
 
 #home .hero-section {
   position: relative;
   height: 800px;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/img/mask.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/img/mask.png");
   object-fit: contain;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -338,9 +369,9 @@ export default {
 }
 
 #home .nav-tabs .nav-link.active {
-  border-bottom: 1px solid #0086B9;
+  border-bottom: 1px solid #0086b9;
   background: transparent;
-  color: #0086B9;
+  color: #0086b9;
   padding-bottom: 16px;
 }
 
