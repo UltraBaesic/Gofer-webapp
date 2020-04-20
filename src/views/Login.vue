@@ -9,7 +9,7 @@
       <div class="col-xl-7 col-lg-7 col-md-8 col-sm-12 col-xs-12 auth-main">
         <div class="tab-section">
           <div class="tab-header">
-            <ul class="nav nav-tabs nav-justified">
+            <ul class="nav nav-tabs nav-justified auth-nav">
               <li class="nav-item">
                 <a class="nav-link" @click.prevent="setActive('register')" :class="{ active: isActive('register') }" href="#register">Register</a>
               </li>
@@ -38,9 +38,9 @@
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Remember me</label>
                 </div>
-                <button class="btn btn-sm login-btn">Login</button>
               </form>
-              <p class="text-center register-text">You don't have an account?<a href="/register" class="register-link"> Register</a></p>
+              <button class="btn btn-sm login-btn">Login</button>
+              <p class="text-center register-text">You don't have an account?<router-link to="/register" class="register-link"> Register</router-link></p>
             </div>
            </div>
             <div class="tab-pane fade" :class="{'active show': isActive('register')}" id="register">
@@ -179,14 +179,12 @@ export default {
   border-radius: 10px;
   box-shadow: none !important;
   outline: none !important;
-  width: 81%;
 }
 
 #login .forgot-password {
   display: flex;
   justify-content: flex-end;
   text-transform: capitalize;
-  width: 81%;
   letter-spacing: 0.36px;
   color: #0086B9;
   margin-top: -12px;
@@ -203,6 +201,8 @@ export default {
   margin-left: 30px;
   margin-top: 50px;
   font-weight: 700;
+  box-shadow: none;
+  outline: none;
 }
 
 #login .register-link {
@@ -241,6 +241,7 @@ export default {
 
 #login .auth-container .form-container {
   margin-top: 10px;
+  padding: 0px 100px 0px 0px;
 }
 
 #login .auth-container .form-container .row__container {
@@ -257,14 +258,12 @@ export default {
   border-radius: 10px;
   box-shadow: none !important;
   outline: none !important;
-  width: 81%;
 }
 
 #login .forgot-password {
   display: flex;
   justify-content: flex-end;
   text-transform: capitalize;
-  width: 81%;
   letter-spacing: 0.36px;
   color: #0086B9;
   margin-top: -12px;
@@ -275,7 +274,7 @@ export default {
 #login .register-btn {
   background: #0086B9;
   border-radius: 10px;
-  width: 70%;
+  width: 82%;
   padding: 12px 0px;
   color: #FFFFFF;
   margin-left: 30px;
@@ -303,7 +302,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 81%;
 }
 
 #login .password-strength .step1 {
@@ -328,13 +326,13 @@ export default {
   color: #B90000;
   text-align: end;
   font-size: 12px;
-  width: 80%;
+  margin-right: 5px;
 }
 </style>
 
 <style>
 
-.nav {
+.auth-nav {
   width: 34%;
 }
 

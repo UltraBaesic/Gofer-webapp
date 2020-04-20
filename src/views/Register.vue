@@ -288,7 +288,6 @@ export default {
   border-radius: 10px;
   box-shadow: none !important;
   outline: none !important;
-  width: 81%;
 }
 
 #register .forgot-password {
