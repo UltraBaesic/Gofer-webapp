@@ -31,6 +31,16 @@ export const router = new Router({
           component: () => import('@/views/Verify.vue')
         }
       ]
+    },
+    {
+      path: '/all-errands',
+      component: () => import('@/layouts/DashboardLayout.vue'),
+      children: [
+        {
+          path: '',
+          component: () => import('@/views/Dashboard/AllErrands.vue')
+        }
+      ]
     }
   ]
 })
