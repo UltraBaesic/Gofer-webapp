@@ -39,7 +39,7 @@
                   <label class="form-check-label" for="exampleCheck1">Remember me</label>
                 </div>
               </form>
-              <button class="btn btn-sm login-btn">Login</button>
+              <button class="btn btn-sm login-btn" @click.prevent="moveToDashboard">Login</button>
               <p class="text-center register-text">You don't have an account?<router-link to="/register" class="register-link"> Register</router-link></p>
             </div>
            </div>
@@ -102,6 +102,9 @@ export default {
     },
     setActive(menuItem) {
       this.activeItem = menuItem;
+    },
+    moveToDashboard(){
+      return this.$router.push('/all-errands')
     }
   }
 }
