@@ -41,6 +41,10 @@ export const router = new Router({
           component: () => import('@/views/Dashboard/AllErrands.vue')
         }
       ]
+    },
+    {
+      path: '*',
+      component: () => import('@/views/404.vue')
     }
   ]
 })
