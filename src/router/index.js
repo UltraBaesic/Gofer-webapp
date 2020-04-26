@@ -39,6 +39,18 @@ export const router = new Router({
         {
           path: '',
           component: () => import('@/views/Dashboard/AllErrands.vue')
+        },
+        {
+          path: '/wallet',
+          component: () => import('@/views/Dashboard/Wallet.vue')
+        },
+        {
+          path: '/withdraw',
+          component: () => import('@/views/Withdraw')
+        },
+        {
+          path: '/fund',
+          component: () => import('@/views/Fund')
         }
       ]
     },
