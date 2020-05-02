@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-light nav-shadow">
       <a class="navbar-brand ml-5">
-        <img src="@/assets/img/logo.png" style="width:110px; margin-top: -14px;" alt="logo" />
+        <img src="@/assets/img/logo.png" class="logo" alt="gofer logo" />
       </a>
       <button
         class="navbar-toggler navbar-toggler-right"
@@ -32,7 +32,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <div class="notification-box my-sm-2">
-            <i class="icon-material-outline-notifications"></i>
+            <span class="material-icons">notifications_none</span>
             <span class="notification">9+</span>
           </div>
           <div class="user-box my-sm-0"></div>
@@ -49,10 +49,10 @@
               <img src="@/assets/img/idris.jpg" class="profile-picture" alt="profile-pix" />
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">User Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Transaction History</a>
+              <a class="dropdown-item" href="#">FAQs</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item logout" href="#">Log out</a>
             </div>
           </li>
         </form>
@@ -85,6 +85,11 @@ export default {};
   bottom: 0;
   content: "";
   border-bottom: 2px solid #0086b9;
+}
+
+.logo {
+   width:110px; 
+   margin-top: -14px;
 }
 
 .logo-img {
@@ -141,5 +146,9 @@ export default {};
   text-align: center;
   line-height: 12px;
   border: 2px solid white;
+}
+
+.logout {
+  color: brown;
 }
 </style>

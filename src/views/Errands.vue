@@ -18,9 +18,6 @@ export default {
 * {
   color: #666666;
 }
-body {
-  height: 100vh;
-  background-color: #eef6f9;
-}
+
 
 </style>
