@@ -7,7 +7,7 @@
       </div>
       <ul class="list-unstyled d-flex justify-content-between align-items-center mt-2 nav-links">
         <li>
-          <router-link to="#">All Errands</router-link>
+          <router-link to="#" class="active">All Errands</router-link>
         </li>
         <li>
           <router-link to="#">Post Errand</router-link>
@@ -87,6 +87,15 @@ export default {
 
 #auth-nav .nav-links li a {
   color: #7A9BA8D9;
+  text-decoration: none;
+}
+
+#auth-nav .nav-links li a.active {
+  color: #0086B9;
+  border-bottom: 2px solid #0086B9;
+  display: inline-block;
+  line-height: 0.85;
+  padding-bottom: 3px;
 }
 
 #auth-nav .nav-links .notif {

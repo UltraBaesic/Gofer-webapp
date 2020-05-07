@@ -72,7 +72,7 @@ export default {
   padding-left: 10px;
   font-size: 24px;
   padding-top: 7px;
-  color: #292929;
+  color: #0086B9;
 }
 
 #all-errands .search-container span {
@@ -84,6 +84,7 @@ export default {
 #all-errands .search-container .filter-container {
   cursor: pointer;
 }
+
 
 #all-errands .main-container {
   display: grid;
