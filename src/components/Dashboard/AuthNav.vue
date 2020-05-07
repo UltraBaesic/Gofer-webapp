@@ -78,6 +78,7 @@ export default {
   color: #0086B9;
   font-size: 20px;
   padding-left: 4px;
+  margin-top: -9px;
 }
 
 #auth-nav .nav-links li {
