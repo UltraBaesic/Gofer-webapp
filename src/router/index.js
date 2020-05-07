@@ -39,6 +39,10 @@ export const router = new Router({
         {
           path: '',
           component: () => import('@/views/Dashboard/AllErrands.vue')
+        },
+        {
+          path: '/profile',
+          component: () => import('@/views/Dashboard/Profile.vue')
         }
       ]
     },
