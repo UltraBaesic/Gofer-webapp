@@ -9,8 +9,8 @@
         <span>Filter</span>
       </div>
     </div>
-    <section class="main-container">
-      <div class="errand-card" v-for="i in 20" :key="i">
+    <section class="row main-container">
+      <div class="errand-card col-md-4 mr-2" v-for="i in 20" :key="i">
         <div class="errand-card__header">
           <div class="d-flex">
             <i class="far fa-clock time-icon"></i>
@@ -61,6 +61,7 @@ export default {
   border-radius: 15px;
   box-shadow: none !important;
   outline: none !important;
+  padding-left: 15px;
 }
 
 #all-errands .search-container input::placeholder {
@@ -72,7 +73,7 @@ export default {
   padding-left: 10px;
   font-size: 24px;
   padding-top: 7px;
-  color: #292929;
+  color: #0086B9;
 }
 
 #all-errands .search-container span {
@@ -85,19 +86,25 @@ export default {
   cursor: pointer;
 }
 
+
 #all-errands .main-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 2rem;
+  grid-gap: 2rem; */
+  box-sizing: border-box;
 }
 
 #all-errands .main-container .errand-card {
-  width: 18rem;
+  min-width: 18rem;
   height: 12rem;
   background: #ffffff;
   box-shadow: 0px 3px 6px #00000029;
   padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  max-width: 32%;
 }
+
 
 #all-errands .main-container .errand-card .errand-card__header {
   display: flex;
