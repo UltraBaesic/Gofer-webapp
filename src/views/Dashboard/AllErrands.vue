@@ -61,6 +61,7 @@ export default {
   border-radius: 15px;
   box-shadow: none !important;
   outline: none !important;
+  padding-left: 15px;
 }
 
 #all-errands .search-container input::placeholder {
