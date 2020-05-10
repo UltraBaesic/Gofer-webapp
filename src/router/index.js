@@ -41,6 +41,15 @@ export const router = new Router({
           component: () => import('@/views/Dashboard/AllErrands.vue')
         }
       ]
-    }
+    },  {
+      path: '/post-errand',
+      component: () => import('@/layouts/DashboardLayout.vue'),
+      children: [
+        {
+          path: '',
+          component: () => import('@/views/Dashboard/PostErrand.vue')
+        }
+      ]
+    }, 
   ]
 })

@@ -19,7 +19,7 @@
           <router-link to="#">Profile</router-link>
         </li>
         <li class="d-flex justify-content-between position-relative">
-          <i class="fas fa-bell notif"></i>
+          <i class="material-icons bell">notifications_none</i>
           <div class="notif-circle"></div>
         </li>
         <li class="dropdown img-drop">
@@ -51,6 +51,7 @@ export default {
 </script>
 
 <style scoped>
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 #auth-nav {
   background: #EEF6F9;
@@ -103,13 +104,16 @@ export default {
   margin-top: 5px;
 }
 
+#auth-nav .material-icons.bell {
+  color: #0086B9;
+}
 #auth-nav .nav-links .notif-circle {
   position: absolute;
   width: 7px;
   height: 7px;
   border-radius: 100%;
-  top: 5px;
-  left: 37px;
+  top: 3px;
+  left: 44px;
   background: #DB6314;
 }
 
