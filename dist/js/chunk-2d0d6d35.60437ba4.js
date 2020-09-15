@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0d6d35"],{"73cf":function(e,t,n){"use strict";n.r(t);var s=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},c=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("main",{attrs:{id:"register"}},[n("h1",{staticClass:"d-flex justify-content-center align-items-center"},[e._v(" This is the Registration Page ")])])}],i={},a=i,r=n("2877"),l=Object(r["a"])(a,s,c,!1,null,"af8a4cc8",null);t["default"]=l.exports}}]);
-//# sourceMappingURL=chunk-2d0d6d35.60437ba4.js.map

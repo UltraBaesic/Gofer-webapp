@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2086b7"],{a55b:function(e,t,n){"use strict";n.r(t);var i=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},s=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("main",{attrs:{id:"login"}},[n("h1",{staticClass:"d-flex justify-content-center align-items-center"},[e._v(" This is the Login Page ")])])}],a={},c=a,r=n("2877"),l=Object(r["a"])(c,i,s,!1,null,"588a7090",null);t["default"]=l.exports}}]);
-//# sourceMappingURL=chunk-2d2086b7.13e775c2.js.map
